@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "dana";
+  src: url("dana-fanum-regular.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "dana";
+  color: black;
+}
+body,
+modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  height: 100vh;
+  background: rgba(137, 43, 226, 0.687);
+}
+.openBtn {
+  border: 0;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.modal-container {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+
+.modal-contanet {
+  width: 400px;
+  background-color: #fefefe;
+  margin: auto;
+  margin-top: 100px;
+  animation: animatetop 0.5s;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0, 3);
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color: blueviolet;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.modal-header .closeBtn {
+  font-size: 35px;
+  cursor: pointer;
+}
+.modal-header .closeBtn:hover {
+  color: rgb(39, 39, 39);
+}
+.modal-body {
+  padding: 15px 20px;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+@keyframes animatetop {
+  0% {
+    /* margin-top: 300px; */
+    opacity: 0;
+  }
+  100% {
+    /* margin-top: 100px; */
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none;
+}
